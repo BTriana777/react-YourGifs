@@ -1,13 +1,288 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@700&family=Open+Sans:wght@300;400;500;700&display=swap");
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  padding: 8px;
+  background-image: linear-gradient(
+    to left bottom,
+    #373b52,
+    #303347,
+    #2a2c3b,
+    #232530,
+    #1d1e26
+  );
+}
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.header h2 {
+  align-items: center;
+  background-image: linear-gradient(
+    to right bottom,
+    #852fd3,
+    #8d3ed5,
+    #944cd8,
+    #9c59da,
+    #a365dc,
+    #8f7ced,
+    #7a8ff8,
+    #69a1ff,
+    #18bcff,
+    #00d4ff,
+    #00e9ff,
+    #5ffbf1
+  );
+  border-radius: 0 0 25px 25px;
+  padding: 10px;
+  margin-top: -10px;
+  margin-bottom: 60px;
+  font-family: "Gemunu Libre", sans-serif;
+  color: #f2f2f2;
+  height: 150px;
+  font-size: 80px;
+  width: auto;
+  display: flex;
+  letter-spacing: 4px;
+}
+form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.line {
+  width: 50%;
+  z-index: 999;
+  height: 3px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-position: 0% 0%;
+  background: linear-gradient(
+    to right,
+    #b294ff,
+    #57e6e6,
+    #feffb8,
+    #57e6e6,
+    #b294ff,
+    #57e6e6
+  );
+  background-size: 500% auto;
+  animation: gradient 3s linear infinite;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input {
+  width: 50%;
+  border-style: none;
+  background: transparent;
+  color: #bfd2ff;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  vertical-align: middle;
+  background: rgba(57, 63, 84, 0.8);
+  padding: 10px;
+}
+.containerGridCards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.titleCategory {
+  align-self: flex-start;
+  width: 60%;
+  height: 110px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 25px 0 25px -10px;
+}
+.titleCategory h3 {
+  color: #f2f2f2;
+  font-size: 60px;
+  padding: 10px 50px;
+  border-radius: 0 35px 35px 0;
+  width: 100%;
+  text-align: end;
+  background-image: linear-gradient(
+    to left,
+    #852fd3,
+    #8d3ed5,
+    #944cd8,
+    #9c59da,
+    #a365dc,
+    #8f7ced,
+    #7a8ff8,
+    #69a1ff,
+    #18bcff,
+    #00d4ff,
+    #00e9ff,
+    #5ffbf1
+  );
+}
+.loading {
+  color: #f2f2f2;
+  font-size: 70px;
+  font-weight: 500;
+  letter-spacing: 10px;
+  height: 700px;
+}
+.card-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 65%;
+}
+
+.card {
+  align-content: center;
+  border-radius: 0;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  overflow: hidden;
+  background-color: #f2f2f2;
+  border: #852fd3 solid 2px;
+}
+
+.card p {
+  padding: 7px;
+  text-align: center;
+}
+.card img {
+  max-height: 200px;
+}
+.created {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #1d1e26;
+  color: #f2f2f2;
+  justify-content: center;
+  align-items: center;
+}
+.created h3,
+.created a {
+  font-size: 20px;
+  font-weight: 400;
+  padding: 5px;
+  text-decoration: none;
+  color: #f2f2f2;
+}
+.created a:hover {
+    cursor: pointer;
+    animation: move linear 2000ms infinite;
+}
+.icon {
+  width: 25px;
+  height: 25px;
+}
+@keyframes move {
+    0% {
+      text-shadow:
+        4px -4px 0 #da0641,
+        3px -3px 0 #da0641,
+        2px -2px 0 #da0641,
+        1px -1px 0 #da0641,
+        -4px 4px 0 #13f1fc,
+        -3px 3px 0 #13f1fc,
+        -2px 2px 0 #13f1fc,
+        -1px 1px 0 #13f1fc
+      ;
+    }
+    25% {
+      text-shadow:
+        -4px -4px 0 #13f1fc,
+        -3px -3px 0 #13f1fc,
+        -2px -2px 0 #13f1fc,
+        -1px -1px 0 #13f1fc,
+        4px 4px 0 #da0641,
+        3px 3px 0 #da0641,
+        2px 2px 0 #da0641,
+        1px 1px 0 #da0641
+      ;
+    }
+    50% {
+      text-shadow:
+        -4px 4px 0 #da0641,
+        -3px 3px 0 #da0641,
+        -2px 2px 0 #da0641,
+        -1px 1px 0 #da0641,
+        4px -4px 0 #13f1fc,
+        3px -3px 0 #13f1fc,
+        2px -2px 0 #13f1fc,
+        1px -1px 0 #13f1fc
+      ;
+    }
+    75% {
+      text-shadow:
+        4px 4px 0 #13f1fc,
+        3px 3px 0 #13f1fc,
+        2px 2px 0 #13f1fc,
+        1px 1px 0 #13f1fc,
+        -4px -4px 0 #da0641,
+        -3px -3px 0 #da0641,
+        -2px -2px 0 #da0641,
+        -1px -1px 0 #da0641
+      ;
+    }
+    100% {
+      text-shadow:
+        4px -4px 0 #da0641,
+        3px -3px 0 #da0641,
+        2px -2px 0 #da0641,
+        1px -1px 0 #da0641,
+        -4px 4px 0 #13f1fc,
+        -3px 3px 0 #13f1fc,
+        -2px 2px 0 #13f1fc,
+        -1px 1px 0 #13f1fc
+      ;
+    }
+  }
+@keyframes gradient {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .line {
+    width: 80%;
+  }
+  input {
+    width: 80%;
+  }
+  .titleCategory {
+    width: 80%;
+    margin: 0 0 0 -10px;
+  }
+  .titleCategory h3 {
+    font-size: 24px;
+  }
+  .loading {
+    font-size: 30px;
+  }
+  .card-grid {
+    width: 95%;
+  }
+  .card {
+    max-width: 150px;
+  }
+  .card p {
+    padding: 7px;
+    text-align: center;
+  }
+  .card img {
+    height: 100px;
+  }
 }
